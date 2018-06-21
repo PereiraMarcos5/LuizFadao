@@ -27,6 +27,12 @@ namespace LuizFadinha
         private bool eMulher;
         private bool fazBarulho;
         private string elemento;
+        private string p1;
+        private string p2;
+        private string p3;
+        private string p4;
+        private string p5;
+        private string p6;
 
 
         public string Nome
@@ -167,7 +173,7 @@ namespace LuizFadinha
         public string Elemento
         {
             get { return elemento; }
-            set 
+            set
             {
                 if (string.IsNullOrEmpty(value))
                 {
@@ -178,8 +184,38 @@ namespace LuizFadinha
                 {
                     throw new Exception("Elemento deve conter ao menos 2 caracteres");
                 }
-                elemento = value; 
+                elemento = value;
             }
         }
+        public Fada(string nome, string familia, string cor, string corAsa, decimal tamanhoAsa, bool asaQuebrada, bool eMulher, bool fazBarulho, string elemento)
+        {
+            Nome = nome;
+            Familia = familia;
+            Cor = cor;
+            CorAsa = corAsa;
+            TamanhoAsa = tamanhoAsa;
+            Elemento = elemento;
+        }
+
+        public Fada(string nome, string familia, string cor)
+        {
+            Nome = nome;
+            Familia = familia;
+            Cor = cor;
+
+
+        }
+
+        public Fada(string p1, string p2, string p3, string p4, string p5, string p6)
+        {
+            // TODO: Complete member initialization
+            this.p1 = p1;
+            this.p2 = p2;
+            this.p3 = p3;
+            this.p4 = p4;
+            this.p5 = p5;
+            this.p6 = p6;
+        }
+
     }
 }
